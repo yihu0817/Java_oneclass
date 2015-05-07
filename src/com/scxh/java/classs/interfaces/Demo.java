@@ -7,6 +7,7 @@ public class Demo {
 	 */
 	public static void main(String[] args) {
 		SataHdd sam = new SamsungHdd();
+		int count = SataHdd.count;
 		sam.writeData("ÈıĞÇÓ²ÅÌ");
 		sam.readData();
 		

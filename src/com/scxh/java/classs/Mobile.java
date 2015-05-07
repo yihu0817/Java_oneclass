@@ -10,6 +10,10 @@ public class Mobile {
 	String size; // 手机大小
 	String color; // 手机颜色
 
+	public Mobile(){
+		
+	}
+	
 	// 自定义构造方法
 	public Mobile(String _names, String _size, String _color) {
 		name = _names;
