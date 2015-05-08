@@ -1,0 +1,34 @@
+面向对象
+1.定义一个类名为狗(Dog)的类,Dog类包括两个属性：名称(name)和年龄(age)，
+  Dog还具有三个行为也叫方法:汪汪叫(bark)和 饥饿(hungry)，显示信息(show),
+  bark方法需要传入一个参数（参数是:汪汪叫的内容），方法体要求输出汪汪叫内容.
+  hungry方法要求输出"主人，我饿了"，
+  show方法显示Dog名称和年龄.
+  
+2.实例化Dog类，给Dog类成员变量赋值，分别调用三个方法输出结果。
+
+3.重写Dog类构造方法，在Dog类构造方法中进行名称和年龄赋值.
+
+=====================================================  
+
+4. 小王本来体重70kg，经过减肥，体重降到45kg，试从这个问题领域中识别对象、类、属性、状态和状态的变化。
+ 1）  类：
+ 2）  对象：
+ 3）  属性：
+ 4）  状态：
+ 5）  状态的变化：
+ 
+5. 把一个类放在包里有什么用？
+  答：把类分包的作用：
+  (1)能够区分名字相同的类
+  (2)有助于实施访问权限控制
+  (3)有助于划分和组织Java应用中的各个类
+  
+6.以下哪些main()方法的声明能够作为程序的入口方法？
+  (a)public static void main()
+  (b)public static void main(String[] string)
+  (c)public static void main(String args)
+  (d)static public int main(String[] args)
+  (e)static void main(String[] args)
+  
+  

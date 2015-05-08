@@ -1,0 +1,127 @@
+-、Java概述
+  1.java介绍
+    1>什么是java： 不仅是一门高级编程语言，还是一个平台
+    2>java发展历史
+    3>java特性
+  2.Java开发环境
+    1>jdk,jre
+    2>jvm
+    3>环境变量  path,  classpath
+    4>IDE: Eclipse,NetBeans,IntelliJ
+  3.Java第一个程序分析: HelloWord.java
+
+ 二、Java语法基础
+  1.java八种基本数据类型：  byte  short int long   整型
+                     float  double          小数
+                     boolean                布尔型
+                     char                   字符型
+  2.包装类: Byte   Short    Integer   Long     ->Object类     toString()
+          Float  Double
+          Boolean
+          Character
+          
+  3.基本数据类型与包装类转换 
+     int m = 10;
+     Integer x = m;
+  
+  4.基本数据类型间相互转换
+     byte a = 10;
+     int b = a;
+     
+     float m = 10.0f;
+     int n = (int)m;
+  5.进制   八进制  十六进制
+     int a = 012;    ->2*8^0 + 1*8^1 = 10
+     int b = 0x1F;   ->15*16^0 + 1*16^1 = 31
+  6.制表符
+    \n   \t   \"   \'   \\   
+  
+  7.运算符
+          算数运算符    ++a  a++     
+          关系运算符
+          逻辑运算符
+          位运算符        & |  ^  >>   <<  ~
+          条件运算符     三目运算符       表达式1?表达式2:表达式3    a?b:c
+   
+   
+ 三、流程控制
+  1.分支语句    if - else
+           switch case
+  2.循环语句    while    do-while  for
+    for(int i = 0; i < length; i++)   
+     
+    String[] array = {"1","2","3"};
+    for(String str : array){
+    	str
+    }   
+  3.跳转语句
+    break;  continue;   return;
+ 
+四、面向对象
+   1.类 与 对象 
+               类是对象的模板     成员变量  成员方法   构造方法   创建对象new
+               
+   2.修饰符
+            访问修饰符:public private protected  缺省,   
+            非访问修饰符:  static  final   
+            
+   3.作用域
+              变量分类
+                  类变量(全局变量)   实例变量（成员变量 ）    局部变量(方法体)   块变量（if{}）      
+               
+   3.关键字
+     this   super
+   4.继承      extends   
+   
+   5.类中方法重载   
+              继承中方法重载与覆盖
+              
+   6.多态 ： 一个事物有多种表现型态就叫多态
+              多态体现的三个条件 : 1>继承  2>覆盖(重写) 3>父类变量引用子类对象
+   
+   7.关键字 instanceof     
+   
+   8.内部类
+             成员内部   局部内部类   匿名内部类
+   
+   9.抽象类     abstract     
+               抽象方法  
+          
+   10.接口     interface
+      interface 接口名  
+      class 类名   implements 接口1,接口2
+   
+   11.抽象类与接口区别     
+           
+   12.泛型
+   	  泛型类    class 类名<V,E>       
+   	  泛型方法       public <T> void 方法名()
+   
+ 五、常用类与集合
+   1.数组     
+              类型[]  数组名;  int[] array;
+             初始化  int[] array = new int[10];   length
+          int[]  array = {1,2,3,4};    
+   
+   2.ArrayList  
+     ArrayList list = new ArrayList();
+     list.add(Object);
+     list.remove(object);
+     list.remove(index);
+     list.get(index);
+     list.clear();
+     
+   3.String 
+   4.StringBuffer
+   5.StringBuilder
+   6.Scanner
+     
+          
+          
+          
+          
+                
+     
+      
+   
+   
