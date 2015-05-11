@@ -1,4 +1,4 @@
-package com.scxh.java.ex010.classs.overring;
+package com.scxh.java.ex010.classs.overload;
 
 public class Test {
 

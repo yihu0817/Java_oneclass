@@ -1,4 +1,4 @@
-package com.scxh.java.ex010.classs.overring;
+package com.scxh.java.ex010.classs.overload;
 
 /**
  * 在Java中，同一个类中的多个方法可以有相同的名字，只要它们的参数列表不同就可以，这被称为方法重载(method overloading)。

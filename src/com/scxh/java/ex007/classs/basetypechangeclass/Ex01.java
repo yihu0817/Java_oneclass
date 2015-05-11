@@ -1,4 +1,4 @@
-package com.scxh.java.ex007.classs.bzclass;
+package com.scxh.java.ex007.classs.basetypechangeclass;
 
 public class Ex01 {
 

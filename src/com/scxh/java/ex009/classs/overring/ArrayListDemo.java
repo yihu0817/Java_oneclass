@@ -1,8 +1,12 @@
-package com.scxh.java.ex009.classs.cover;
+package com.scxh.java.ex009.classs.overring;
 
 import java.util.ArrayList;
-
-public class Ex01 {
+/**
+ * Arraylist Ñ§Ï°ÒýÈë
+ * @author viktor
+ *
+ */
+public class ArrayListDemo {
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 		People[] array = new People[10];

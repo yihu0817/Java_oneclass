@@ -1,4 +1,4 @@
-package com.scxh.java.ex009.classs.cover.ex01;
+package com.scxh.java.ex009.classs.overring.ex01;
 
 public class Animal {
 	String name;

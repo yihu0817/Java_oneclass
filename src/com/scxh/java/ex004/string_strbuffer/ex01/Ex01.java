@@ -1,7 +1,7 @@
 package com.scxh.java.ex004.string_strbuffer.ex01;
 
 import com.scxh.java.ex006.classs.class_object.Student;
-import com.scxh.java.ex010.classs.overring.Dog;
+import com.scxh.java.ex010.classs.overload.Dog;
 
 
 /**

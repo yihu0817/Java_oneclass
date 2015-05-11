@@ -1,4 +1,4 @@
-package com.scxh.java.ex009.classs.cover.ex01;
+package com.scxh.java.ex009.classs.overring.ex01;
 
 public final class Ex01 {
 	final String NAME = "ÐÂ»ª";

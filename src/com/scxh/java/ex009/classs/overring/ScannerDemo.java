@@ -1,8 +1,8 @@
-package com.scxh.java.ex009.classs.cover;
+package com.scxh.java.ex009.classs.overring;
 
 import java.util.Scanner;
 
-public class Ex02 {
+public class ScannerDemo {
 	/**
 	 * @param args
 	 */

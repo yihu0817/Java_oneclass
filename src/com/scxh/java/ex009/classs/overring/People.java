@@ -1,9 +1,10 @@
-package com.scxh.java.ex009.classs.cover;
+package com.scxh.java.ex009.classs.overring;
 
 public class People {
-	String name;
+	String name = "people";
 
 	public People(){
+		System.out.println("构造方法People");
 	}
 	
 	public People(String name){

@@ -1,4 +1,4 @@
-package com.scxh.java.ex009.classs.cover.ex01;
+package com.scxh.java.ex009.classs.overring.ex01;
 
 public class Dog extends Animal {
 	// 构造方法不能被继承，通过super()调用
