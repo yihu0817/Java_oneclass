@@ -3,7 +3,7 @@ package com.scxh.java.ex008.classs.extend;
 public class Father{
 	private String girl;
 
-	String name;
+	protected String name;
 	int age;
 	
 	double monney;

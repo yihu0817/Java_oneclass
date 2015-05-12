@@ -8,17 +8,16 @@ public class ThrowDemo {
 	public static void main(String[] args) {
 		ThrowDemo obj = new ThrowDemo();
 		try {
+			
+			obj.readFileMethod();
 			obj.arithmeticThrowMethod();
+			
 		} catch (ArithmeticException a) {
 			System.out.println("除数为零  .");
-		}
-
-		try {
-			obj.readFileMethod();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}finally{
-			
+			//一定执行的代码
 		}
 	}
 
@@ -28,6 +27,7 @@ public class ThrowDemo {
 
 		if (b == 0) {
 			throw new ArithmeticException();
+//			throw new Exception();
 		}
 
 		int c = a / b;

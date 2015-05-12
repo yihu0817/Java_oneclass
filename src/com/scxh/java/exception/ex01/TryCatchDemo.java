@@ -16,7 +16,7 @@ import java.util.ArrayList;
  * 
  *   //可能引起异常的代码块
  * 
- * } catch (Exception e) { 
+ * }catch (Exception e) { 
  *   //处理异常 
  * }finallay{
  *   //一定执行代码块
@@ -24,6 +24,7 @@ import java.util.ArrayList;
  * 7.throw 
  * 8.throws 
  * 9.finally
+ * 
  * @author viktor 
  * 
  */
@@ -47,7 +48,7 @@ public class TryCatchDemo {
 		int b = a / c;
 		System.out.println("b = " + b);
 	}
-
+	
 	/**
 	 * 数组下标越界 java.lang.ArrayIndexOutOfBoundsException
 	 */
