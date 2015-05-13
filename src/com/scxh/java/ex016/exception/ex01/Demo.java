@@ -1,4 +1,4 @@
-package com.scxh.java.exception.ex01;
+package com.scxh.java.ex016.exception.ex01;
 
 public class Demo {
 

@@ -1,4 +1,4 @@
-package com.scxh.java.queue.ex01;
+package com.scxh.java.ex018.queue.ex01;
 
 public class Demo {
 
@@ -21,7 +21,9 @@ public class Demo {
 		queue.add(stuD);
 		
 		Student stu1 = queue.get();
-		System.out.println("从队列取出数据 "+stu1.getName());
+		String name = stu1.getName();
+		
+		System.out.println("从队列取出数据 "+name);
 		//======================================
 		
 		

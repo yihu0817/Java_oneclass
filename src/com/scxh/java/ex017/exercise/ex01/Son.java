@@ -1,4 +1,4 @@
-package com.scxh.java.exercise.ex01;
+package com.scxh.java.ex017.exercise.ex01;
 
 public class Son extends Father {
 	String str = "son";

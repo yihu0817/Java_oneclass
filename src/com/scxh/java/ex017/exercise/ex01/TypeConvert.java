@@ -1,4 +1,4 @@
-package com.scxh.java.exercise.ex01;
+package com.scxh.java.ex017.exercise.ex01;
 
 class A {
 	String s = "class A";

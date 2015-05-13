@@ -1,4 +1,4 @@
-package com.scxh.java.exercise.ex01;
+package com.scxh.java.ex017.exercise.ex01;
 
 /**
  * 创建对象过程:   new 类名();

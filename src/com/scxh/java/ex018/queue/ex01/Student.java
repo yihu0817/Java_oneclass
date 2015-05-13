@@ -1,4 +1,4 @@
-package com.scxh.java.queue.ex01;
+package com.scxh.java.ex018.queue.ex01;
 
 public class Student {
 	private String name;

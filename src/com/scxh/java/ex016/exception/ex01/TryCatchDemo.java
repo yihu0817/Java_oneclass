@@ -1,4 +1,4 @@
-package com.scxh.java.exception.ex01;
+package com.scxh.java.ex016.exception.ex01;
 
 import java.util.ArrayList;
 
