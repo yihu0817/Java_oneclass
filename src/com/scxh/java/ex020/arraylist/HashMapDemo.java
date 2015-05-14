@@ -5,14 +5,14 @@ import java.util.HashMap;
 
 import com.scxh.java.ex018.queue.ex01.Student;
 
-public class ArryListDemo {
+public class HashMapDemo {
 	ArrayList<Student> list = new ArrayList<Student>();
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		ArryListDemo demo = new ArryListDemo();
+		HashMapDemo demo = new HashMapDemo();
 		
 		demo.addStudentToArryList();
 
