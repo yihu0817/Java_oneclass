@@ -1,4 +1,4 @@
-package com.scxh.java.ex023.file.sream;
+package com.scxh.java.ex024.file.sream;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
