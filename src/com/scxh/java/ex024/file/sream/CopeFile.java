@@ -15,24 +15,26 @@ public class CopeFile {
 		CopeFile copeFile = new CopeFile();
 		try {
 
-//			copeFile.copyFile();
+			copeFile.copyFile();
 
-			copeFile.copyFileTwo();
+//			copeFile.copyFileTwo();
 			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 	/**
-	 * 
+	 * 流的构造,顺序:由内到外
+	 * 流的关闭，顺序:由外到内关闭
 	 * @throws IOException
 	 */
 	public void copyFile() throws IOException {
 		BufferedInputStream bufInput = new BufferedInputStream(
 				new FileInputStream("F:/test.txt"));
 
-		BufferedOutputStream bufOut = new BufferedOutputStream(
-				new FileOutputStream("F:/copyfile.txt"));
+		FileOutputStream output = new FileOutputStream("F:/copyfile.txt");
+		
+		BufferedOutputStream bufOut = new BufferedOutputStream(output);
 
 		int count = bufInput.available();
 
@@ -43,7 +45,12 @@ public class CopeFile {
 		bufOut.write(bytes, 0, count);
 
 		bufInput.close();
+		
+	
+		
 		bufOut.close();
+		
+		output.close();
 	}
 	/**
 	 * 复制大文件
