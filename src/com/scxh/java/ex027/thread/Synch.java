@@ -17,13 +17,14 @@ class Callme {
 }
 
 class Caller implements Runnable {
+	
 	String msg;
 	Callme target;
 	Thread t;
-
-	public Caller(Callme targ, String s) {
-		target = targ;
-		msg = s;
+	public Caller(Callme target, String msg) {
+		
+		this.target = target;
+		this.msg = msg;
 		t = new Thread(this);
 		t.start();
 	}
@@ -36,9 +37,14 @@ class Caller implements Runnable {
 class Synch {
 	public static void main(String args[]) {
 		Callme target = new Callme();
-		Caller ob1 = new Caller(target, "Hello");   
-		Caller ob2 = new Caller(target, "Synchronized");
-		Caller ob3 = new Caller(target, "World");
+		new Caller(target, "Hello");
+		new Caller(target, "Synchronized");
+		new Caller(target, "World");
+		
+//		Callme target = new Callme();
+//		Caller ob1 = new Caller(target, "Hello");   
+//		Caller ob2 = new Caller(target, "Synchronized");
+//		Caller ob3 = new Caller(target, "World");
 		// wait for threads to end
 //		try {
 //			ob1.t.join();
