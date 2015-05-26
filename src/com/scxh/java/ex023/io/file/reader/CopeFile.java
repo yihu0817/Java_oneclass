@@ -1,4 +1,4 @@
-package com.scxh.java.ex023.file.reader;
+package com.scxh.java.ex023.io.file.reader;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

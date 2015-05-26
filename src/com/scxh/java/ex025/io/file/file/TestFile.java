@@ -1,4 +1,4 @@
-package com.scxh.java.ex025.file.file;
+package com.scxh.java.ex025.io.file.file;
 
 import java.io.File;
 import java.io.IOException;

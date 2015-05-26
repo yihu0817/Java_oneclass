@@ -1,4 +1,4 @@
-package com.scxh.java.ex023.file.reader;
+package com.scxh.java.ex023.io.file.reader;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
