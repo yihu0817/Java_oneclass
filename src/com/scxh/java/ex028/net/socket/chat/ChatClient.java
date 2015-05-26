@@ -1,7 +1,6 @@
 package com.scxh.java.ex028.net.socket.chat;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
@@ -21,8 +20,6 @@ public class ChatClient {
 			//字符缓冲标准输入流
 			BufferedReader sin = new BufferedReader(new InputStreamReader(
 					System.in));
-			System.out.println("请输入字符串:");
-			String line = sin.readLine();//从键盘读取一行字符数据
 			
 			Socket client = new Socket(host, port);
 
@@ -34,12 +31,21 @@ public class ChatClient {
 			PrintWriter writer = new PrintWriter(new OutputStreamWriter(
 					client.getOutputStream()));
 			
-			writer.println(line);   //向socket管道写入数据，向服务端发送数据
-			writer.flush();
+			System.out.println("请输入字符串:");
+			String line = sin.readLine();//从键盘读取一行字符数据
+			while(!line.equals("over")){
+				writer.println(line);   //向socket管道写入数据，向服务端发送数据
+				writer.flush();
+				
+				System.out.println("客户端 :"+line);
+				
+				String socketLine = reader.readLine();  //从socket管道读取数据， 从服务端读取数据
+				
+				System.out.println("服务端 :"+socketLine);
+				line = sin.readLine();
+			}
 			
-			String socketLine = reader.readLine();  //从socket管道读取数据， 从服务端读取数据
-			System.out.println("接收服务端数据 ："+socketLine);
-			
+
 
 			//关闭流
 			reader.close();
