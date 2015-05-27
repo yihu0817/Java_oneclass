@@ -10,7 +10,7 @@ import java.net.UnknownHostException;
 
 public class ChatClientThread {
 	private static final String host = "192.168.1.199";
-	private static final int port = 7776;
+	private static final int port = 9527;
 
 	public static boolean exitFlag = false;
 	/**
@@ -54,7 +54,6 @@ public class ChatClientThread {
 							break;
 						}
 					}
-
 				}
 			}).start();
 			

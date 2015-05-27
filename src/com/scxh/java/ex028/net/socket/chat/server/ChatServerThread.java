@@ -31,8 +31,6 @@ public class ChatServerThread {
 			//字符缓冲输出流, 向客户端发送消息。
 			PrintWriter writer = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
 			
-			
-			
 			ReceiveMessageRunable rmRunable = new ReceiveMessageRunable(reader);
 			Thread receiveThread = new Thread(rmRunable);
 			receiveThread.start();
