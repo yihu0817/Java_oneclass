@@ -1,13 +1,15 @@
-package com.scxh.java.ex028.net.socket.chat.client;
+package com.scxh.java.ex028.net.socket.chat.typeclient;
 
 
 public class TestChatClient {
 	private static final String host = "192.168.1.199";
 	private static final int port = 9527;
 
+	
 	public static void main(String[] args) {
 		final ChatClientType client = new ChatClientType(host,port);
-
+		client.name = "小明";
+		
 		String message = client.getMessageByKeyBoard(client.sin);
 
 		client.sendMessage(message, client.to);
@@ -20,7 +22,7 @@ public class TestChatClient {
 					String fromMessage = client.receiveMessage(client.from);
 				
 					if (fromMessage != null) {
-						client.showMessage("美女 :" + fromMessage);
+						client.showMessage(client.name+ " :" + fromMessage);
 					}
 				}
 			}

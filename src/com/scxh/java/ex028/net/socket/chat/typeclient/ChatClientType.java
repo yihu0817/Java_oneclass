@@ -1,4 +1,4 @@
-package com.scxh.java.ex028.net.socket.chat.client;
+package com.scxh.java.ex028.net.socket.chat.typeclient;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,6 +24,8 @@ public class ChatClientType {
 	public PrintWriter to;
 	/**sokcetÍ¨µÀ*/
 	public Socket socket;
+	
+	public String name;
 
 	public ChatClientType(String host, int port) {
 		try {
