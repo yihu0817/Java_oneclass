@@ -1,4 +1,4 @@
-package com.scxh.java.ex028.net.socket.chat.client;
+package com.scxh.java.ex028.net.socket.chat.tclient;
 
 import java.io.BufferedReader;
 import java.io.IOException;

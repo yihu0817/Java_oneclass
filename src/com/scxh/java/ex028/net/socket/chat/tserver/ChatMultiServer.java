@@ -1,4 +1,4 @@
-package com.scxh.java.ex028.net.socket.chat.server;
+package com.scxh.java.ex028.net.socket.chat.tserver;
 
 import java.io.IOException;
 import java.net.ServerSocket;
