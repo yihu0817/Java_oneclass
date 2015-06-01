@@ -23,7 +23,7 @@ public class URLDemo {
 		try {
 			URL url = new URL("http://it.warmtel.com/?p=661");
 			URLConnection con = url.openConnection();
-
+			
 			InputStream input = con.getInputStream();
 			InputStreamReader instr = new InputStreamReader(input,"UTF-8");
 			BufferedReader bufReader = new BufferedReader(instr);
