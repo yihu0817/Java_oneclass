@@ -8,8 +8,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DBUtil {
-	// 声明Connection对象
-	private Connection connect;
 	// 驱动程序名
 	private String driver = "com.mysql.jdbc.Driver";
 	// URL指向要访问的数据库名mydata
@@ -19,7 +17,22 @@ public class DBUtil {
 	// MySQL配置时的密码
 	private String password = "a123";
 
-	public DBUtil() {
+	private static DBUtil DB = new DBUtil();
+
+	/**
+	 * 设计模式 之单例模式
+	 * 
+	 * @return
+	 */
+	public static DBUtil getInstance() {
+		if (DB == null) {
+			DB = new DBUtil();
+		}
+
+		return DB;
+	}
+
+	private DBUtil() {
 		// 加载驱动程序
 		try {
 			Class.forName(driver);
@@ -31,13 +44,16 @@ public class DBUtil {
 	/**
 	 * 数据库连接
 	 */
-	public void connectDB() {
+	public Connection getConnectDB() {
+		Connection connect = null;
 		try {
 			connect = (Connection) DriverManager.getConnection(url, user,
 					password);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+
+		return connect;
 	}
 
 	/**
@@ -51,6 +67,8 @@ public class DBUtil {
 				+ student.getNumber() + "','" + student.getName() + "','"
 
 				+ student.getSex() + "','" + student.getAge() + "')";
+
+		Connection connect = getConnectDB();
 		Statement stateMent = null;
 		try {
 			stateMent = connect.createStatement();
@@ -65,12 +83,20 @@ public class DBUtil {
 					e.printStackTrace();
 				}
 			}
+			if (connect != null) {
+				try {
+					connect.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 
 	public void inSertStudent(Student student) {
 
 		String sql = "insert into student (number,name,sex,age) values (?,?,?,?)";
+		Connection connect = getConnectDB();
 		PreparedStatement pStmt = null;
 		try {
 			pStmt = connect.prepareStatement(sql);
@@ -91,6 +117,13 @@ public class DBUtil {
 					e.printStackTrace();
 				}
 			}
+			if (connect != null) {
+				try {
+					connect.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 
@@ -104,6 +137,7 @@ public class DBUtil {
 		String sql = "update student set name = '" + student.getName()
 				+ "', number = '" + student.getNumber() + "' where id='" + id
 				+ "'";
+		Connection connect = getConnectDB();
 		Statement stateMent = null;
 		try {
 			stateMent = connect.createStatement();
@@ -114,6 +148,13 @@ public class DBUtil {
 			if (stateMent != null) {
 				try {
 					stateMent.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (connect != null) {
+				try {
+					connect.close();
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}
@@ -129,6 +170,7 @@ public class DBUtil {
 	public void deleteStudentById(int id) {
 		String sql = "delete from student where id = " + id;
 		Statement stateMent = null;
+		Connection connect = getConnectDB();
 		try {
 			stateMent = connect.createStatement();
 			stateMent.execute(sql);
@@ -142,6 +184,13 @@ public class DBUtil {
 					e.printStackTrace();
 				}
 			}
+			if (connect != null) {
+				try {
+					connect.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 
@@ -149,6 +198,7 @@ public class DBUtil {
 		String sql = "select * from student";
 		Statement stateMent = null;
 		ResultSet resultSet = null;
+		Connection connect = getConnectDB();
 		try {
 			stateMent = connect.createStatement();
 			resultSet = stateMent.executeQuery(sql);
@@ -172,16 +222,14 @@ public class DBUtil {
 					e.printStackTrace();
 				}
 			}
-		}
-	}
-
-	public void closeDB() {
-		if (connect != null) {
-			try {
-				connect.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
+			if (connect != null) {
+				try {
+					connect.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
 			}
 		}
 	}
+
 }

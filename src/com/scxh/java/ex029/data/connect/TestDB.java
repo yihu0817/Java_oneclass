@@ -7,17 +7,26 @@ public class TestDB {
 	 */
 	public static void main(String[] args) {
 		Student student = new Student();
-		student.setName("王二");
-		student.setNumber(1005);
+		student.setName("王三");
+		student.setNumber(1008);
 		student.setPassWord("abcd");
 		student.setAge("13岁");
 		student.setSex("男");
 
-		DBUtil db = new DBUtil();
-		db.connectDB();
+		DBUtil db =  DBUtil.getInstance();
 		
 //		db.addStudent(student);
 		db.inSertStudent(student);
+		
+		
+		db = DBUtil.getInstance();
+		db.selectStudent();
+		
+		db = DBUtil.getInstance();
+		db.selectStudent();
+		
+		
+		db = DBUtil.getInstance();
 		db.selectStudent();
 		
 		
@@ -28,7 +37,6 @@ public class TestDB {
 //		
 //		db.selectStudent();
 		
-		db.closeDB();
 	}
 
 }
