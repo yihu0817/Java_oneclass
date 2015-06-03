@@ -56,7 +56,6 @@ public class Teacher {
 			System.out.println("您输入的账号错误,请重新输入！");
 			login();
 		}
-
 	}
 
 	/**

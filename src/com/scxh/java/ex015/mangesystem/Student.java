@@ -30,6 +30,7 @@ public class Student {
 		int number = scaner.nextInt();
 
 		Student stu = check(number);
+		
 		if(stu == null){
 			Student student = new Student(name, number);
 			mStudentList.add(student);
