@@ -16,7 +16,7 @@ public class StudentImpTest {
 		Scanner scaner = new Scanner(System.in);
 
 		for (int i = 0;; i++) {
-			System.out.println("<ÊäÈë²Ù×÷ÃüÁî:>");
+			System.out.println("[ÊäÈë²Ù×÷ÃüÁî]:");
 			int command = scaner.nextInt();
 			switch (command) {
 			case 1:

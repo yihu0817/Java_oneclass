@@ -4,21 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StudentImp {
-	public String name; // 姓名
-	public int number; // 学号
-
-	public ArrayList<StudentImp> mStudentList = new ArrayList<StudentImp>();// 存储学生对象
-
-	private StudentDB db = StudentDB.getInstance();
-	
-	public StudentImp() {
-	}
-
-	public StudentImp(String name, int number) {
-		this.name = name;
-		this.number = number;
-	}
-
+	private StudentDB mDB = StudentDB.getInstance();
 	/**
 	 * 添加学生
 	 */
@@ -30,11 +16,11 @@ public class StudentImp {
 		System.out.println("请输入学号:");
 		String number = scaner.next();
 
-		boolean isStudent = db.selectStudent(number);
+		boolean isStudent = mDB.selectStudent(number);
 		
 		if(!isStudent ){
 			StudentBean student = new StudentBean(name, number);
-			db.addStudent(student);
+			mDB.addStudent(student);
 
 			System.out.println("======添加成功 ! 学生姓名是 :" + student.getName() + ",学号是 : "
 					+ student.getNumber()+"=========");
@@ -53,11 +39,11 @@ public class StudentImp {
 		System.out.println("请输入学号:");
 		String number = scaner.next();
 
-		boolean isStudent = db.selectStudentByNumber(number);
+		boolean isStudent = mDB.selectStudentByNumber(number);
 		if (!isStudent) {
 			System.out.println("您输入的学号为" + number + "的学生不存在!");
 		} else {
-			db.deleteStudentBean(number);
+			mDB.deleteStudentBean(number);
 			System.out.println("====删除学生成功!学号是:" + number + "的学生已从学生管理系统中删除====");
 		}
 	}
@@ -73,12 +59,12 @@ public class StudentImp {
 		String number = scaner.next();
 
 		
-		boolean isStudent = db.selectStudentByNumber(number);
+		boolean isStudent = mDB.selectStudentByNumber(number);
 		
 		if (!isStudent) {
 			System.out.println("您查找的学号为" + number + "的学生不存在!");
 		} else {
-			StudentBean student = db.seleStudentBeans(number);
+			StudentBean student = mDB.seleStudentBeans(number);
 			System.out.println("===您查找的学生是  "+student.getName()+"====");
 		}
 	}
@@ -88,7 +74,7 @@ public class StudentImp {
 	 */
 	public void showAllStudent() {
 		System.out.println("姓名 "+" \t"+ " 学号");
-		ArrayList<StudentBean> list = db.selectAllStudent();
+		ArrayList<StudentBean> list = mDB.selectAllStudent();
 		for(StudentBean students : list){
 			System.out.println(students.getName()+"\t"+students.getNumber());
 		}
