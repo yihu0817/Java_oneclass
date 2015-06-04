@@ -9,6 +9,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 import com.scxh.java.ex015.mangesystem_db.StudentBean;
 import com.scxh.java.ex015.mangesystem_db.StudentDB;
@@ -25,51 +28,78 @@ public class WindwoDemo extends JFrame {
 	JButton registBtn; // 注册按钮
 	JLabel userNameLable; // 显示用户名的标签
 	JLabel passWordLable; // 显示密码标签
-
+	JTextField userNameTxt;//用户名文本输入框
+	JTextField passWordTxt;//密码文本输入框
+	JPanel userJPanel,pwJPanel,userPwJPanel; 
+	
 	public WindwoDemo() {
 		super("第一个窗口程序");
-		this.setBounds(500, 100, 400, 300);
+		this.setBounds(500, 100, 300, 300);
 		container = this.getContentPane();
 		container.setLayout(new FlowLayout());
-		container.setBackground(Color.white);
-
-		this.setVisible(true);
-
+//		container.setBackground(Color.white);
+//		this.setResizable(false);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 	}
 
 	public void intint() {
 		// 初化控件
-		loginBtn = new JButton("添加数据");
+		loginBtn = new JButton("登录");
 		registBtn = new JButton("注册");
 		userNameLable = new JLabel("用户名:");
 		passWordLable = new JLabel("密码:");
-
+		userNameTxt = new JTextField(10);
+		passWordTxt= new JTextField(10);
+		userJPanel = new JPanel();
+		pwJPanel = new JPanel();
+		userPwJPanel = new JPanel();
+		
+		userJPanel.setLayout(new FlowLayout());
+		pwJPanel.setLayout(new FlowLayout());
+		userPwJPanel.setLayout(new FlowLayout());
+		
 		// 添加控件到容器
-		container.add(userNameLable);
-		container.add(loginBtn);
-		container.add(passWordLable);
-		container.add(registBtn);
+		userJPanel.add(userNameLable);
+		userJPanel.add(userNameTxt);
+		
+		pwJPanel.add(passWordLable);
+		pwJPanel.add(passWordTxt);
+		
+		userPwJPanel.add(loginBtn);
+		userPwJPanel.add(registBtn);
 
+		container.add(userJPanel);
+		container.add(pwJPanel);
+		container.add(userPwJPanel);
+		
+		
 		// 注册监听事件
 		loginBtn.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				StudentBean student = new StudentBean("美女","1013");
-				StudentDB db = StudentDB.getInstance();
-				db.addStudent(student);
+				String txt = userNameTxt.getText();
+				System.out.println(txt);
+				
+				if(txt.equals("")){
+					JOptionPane.showMessageDialog(null, "登录名和密码不能为空！");
+				}
+				
 			}
 		});
 		registBtn.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("ok >>>注册>>>>>>>>>>");
 				WindwoDemo.this.setVisible(false);
 				new ContainerDemo().ininWindow();
 
 			}
 		});
+	
+		
+		this.setVisible(true);
 	}
 
 	/**
