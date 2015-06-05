@@ -1,6 +1,5 @@
 package com.scxh.java.ex031.gui;
 
-import java.awt.Color;
 import java.awt.Container;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
@@ -13,11 +12,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import com.scxh.java.ex015.mangesystem_db.StudentBean;
-import com.scxh.java.ex015.mangesystem_db.StudentDB;
-
 /**
- * 1.窗口->容器->布局->组件 2.事件->监听->注册事件监听
+ * 1.窗口->容器->布局->组件 
+ * 2.事件->监听->注册事件监听
  * 
  * @author viktor
  * 
@@ -40,7 +37,6 @@ public class WindwoDemo extends JFrame {
 //		container.setBackground(Color.white);
 //		this.setResizable(false);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
 	}
 
 	public void intint() {
@@ -85,7 +81,6 @@ public class WindwoDemo extends JFrame {
 				if(txt.equals("")){
 					JOptionPane.showMessageDialog(null, "登录名和密码不能为空！");
 				}
-				
 			}
 		});
 		registBtn.addActionListener(new ActionListener() {
