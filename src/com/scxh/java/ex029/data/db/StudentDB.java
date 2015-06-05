@@ -1,10 +1,12 @@
-package com.scxh.java.ex015.mangesystem_db;
+package com.scxh.java.ex029.data.db;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
+import com.scxh.java.ex015.mangesystem_db.StudentBean;
 
 /**
  * 数据存储层,实现数据库封装.

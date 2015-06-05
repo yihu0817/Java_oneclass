@@ -19,7 +19,7 @@ import javax.swing.JTextField;
  * @author viktor
  * 
  */
-public class WindwoDemo extends JFrame {
+public class WindwoEvenDemo extends JFrame {
 	Container container; // 容器
 	JButton loginBtn; // 登录按钮
 	JButton registBtn; // 注册按钮
@@ -29,7 +29,7 @@ public class WindwoDemo extends JFrame {
 	JTextField passWordTxt;//密码文本输入框
 	JPanel userJPanel,pwJPanel,userPwJPanel; 
 	
-	public WindwoDemo() {
+	public WindwoEvenDemo() {
 		super("第一个窗口程序");
 		this.setBounds(500, 100, 300, 300);
 		container = this.getContentPane();
@@ -87,7 +87,7 @@ public class WindwoDemo extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				WindwoDemo.this.setVisible(false);
+				WindwoEvenDemo.this.setVisible(false);
 				new ContainerDemo().ininWindow();
 
 			}
@@ -101,7 +101,7 @@ public class WindwoDemo extends JFrame {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		new WindwoDemo().intint();
+		new WindwoEvenDemo().intint();
 	}
 
 }

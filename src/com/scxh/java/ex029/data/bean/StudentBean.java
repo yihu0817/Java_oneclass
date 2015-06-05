@@ -1,4 +1,4 @@
-package com.scxh.java.ex015.mangesystem_db;
+package com.scxh.java.ex029.data.bean;
 
 public class StudentBean {
 	private String name; // ĞÕÃû

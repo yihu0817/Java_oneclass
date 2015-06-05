@@ -12,7 +12,10 @@ public class User implements Comparable<User> {
 	}
 
 	public int compareTo(User arg0) {
-		return this.getOrder().compareTo(arg0.getOrder());
+//		return this.getOrder().compareTo(arg0.getOrder());
+		
+		return this.getOrder() > arg0.getOrder()?1:-1;
+		
 	}
 
 	public String getName() {

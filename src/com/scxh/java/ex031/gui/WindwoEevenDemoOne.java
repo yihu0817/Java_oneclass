@@ -16,14 +16,14 @@ import javax.swing.JLabel;
  * @author viktor
  * 
  */
-public class WindwoDemoOne extends JFrame implements ActionListener {
+public class WindwoEevenDemoOne extends JFrame implements ActionListener {
 	Container container; //容器
 	JButton loginBtn;    //登录按钮
 	JButton registBtn;  //注册按钮
 	JLabel userNameLable; //显示用户名的标签
 	JLabel passWordLable; //显示密码标签
 
-	public WindwoDemoOne() {
+	public WindwoEevenDemoOne() {
 		super("第一个窗口程序");
 		this.setBounds(500, 100, 400, 300);
 		container = this.getContentPane();
@@ -75,7 +75,7 @@ public class WindwoDemoOne extends JFrame implements ActionListener {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		new WindwoDemoOne().intint();
+		new WindwoEevenDemoOne().intint();
 	}
 
 }

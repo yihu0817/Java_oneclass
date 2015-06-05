@@ -118,7 +118,5 @@ public class ChatClientType {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 	}
-
 }

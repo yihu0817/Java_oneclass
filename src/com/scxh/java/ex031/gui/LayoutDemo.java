@@ -13,7 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class WindowLoginDemo extends JFrame {
+public class LayoutDemo extends JFrame {
 	Container container; // ÈÝÆ÷
 	JButton loginBtn; // µÇÂ¼°´Å¥
 	JButton registBtn; // ×¢²á°´Å¥
@@ -29,7 +29,7 @@ public class WindowLoginDemo extends JFrame {
 	JPanel gridJP;
 	JPanel userPwJP;
 
-	public WindowLoginDemo() {
+	public LayoutDemo() {
 		super("ÍøÂç²¼¾ÖÑ§Ï°GridLayout");
 		this.setBounds(500, 100, 300, 400);
 		container = this.getContentPane();
@@ -78,7 +78,7 @@ public class WindowLoginDemo extends JFrame {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		new WindowLoginDemo().init();
+		new LayoutDemo().init();
 	}
 
 }

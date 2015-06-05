@@ -2,7 +2,11 @@ package com.scxh.java.ex015.mangesystem_db;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**
+ * ÒµÎñÂß¼­²ã
+ * @author viktor
+ *
+ */
 public class StudentImp {
 	private StudentDB mDB = StudentDB.getInstance();
 	/**

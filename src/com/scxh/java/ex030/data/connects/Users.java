@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Vector;
 
 import org.apache.log4j.Logger;
@@ -121,11 +122,11 @@ public class Users {
 		}
 	}
 
-	public Vector selectAllUser() {
+	public ArrayList<User> selectAllUser() {
 		Connection con = null;
 		PreparedStatement ps = null;
 		String sql = "select * from systemuser";
-		Vector mList = new Vector();
+		ArrayList<User> mList = new ArrayList<User>();
 		try {
 			con = DBPool.getConnection();
 			ps = con.prepareStatement(sql);
