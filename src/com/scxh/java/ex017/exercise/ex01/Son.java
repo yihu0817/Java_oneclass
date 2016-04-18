@@ -5,7 +5,7 @@ public class Son extends Father {
 	static int a = 10;
 	
 	public Son() {
-		show();
+		super.show();
 		say();
 	}
 
